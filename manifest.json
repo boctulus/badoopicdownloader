@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+
+  "name": "BadooPicDownloader",
+  "description": "Badoo image downloader ;)",
+
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "http://*/*", "https://*/*"],
+      "js": ["jquery-3.4.1.min.js", "index.js"]
+    }
+  ],
+
+  "permissions": [ "activeTab", "tabs" ]
+}
