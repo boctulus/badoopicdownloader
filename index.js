@@ -22,7 +22,7 @@ function createBtn() {
 
    	var btn = document.createElement('a')
    	btn.id='btndownload'
-   	// btn.textContent='Download';
+   	btn.textContent='Download';
    	btn.download='image.jpg'
 	btn.target='_blank'
 	btn.style.position = "absolute"
@@ -31,8 +31,11 @@ function createBtn() {
 	btn.style.left = '50px'
 
 	var img = document.createElement('img');
-	img.src = chrome.extension.getURL('pics/save2-32.png')
+	img.id='btndownloadimg'
 
+	//if(typeof chrome.extension !== 'undefined'){
+	//	img.src = chrome.extension.getURL('pics/save2-32.png')
+	//}
  
 	btn.appendChild(img)
 
